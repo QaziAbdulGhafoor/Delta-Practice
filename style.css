@@ -14,9 +14,13 @@
     "Helvetica Neue",
     sans-serif;
 }
+
+
 .container {
   height: 20rem;
   max-width: 15rem;
+  box-shadow: 2px 2px 4px grey;
+  border-radius: 0.5rem;
 }
 
 .head {
@@ -41,9 +45,14 @@
 
 input {
   height: 50%;
-  border: none;
   padding-left: 1rem;
   border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid green;
 }
 
 input + button {
@@ -81,3 +90,28 @@ li button {
 .done {
   text-decoration: line-through;
 }
+
+@keyframes invalidInput {
+  0% {
+    border: none;
+  }
+  25% {
+    border-bottom: 1px solid red;
+  }
+  50% {
+    border-left:  1px solid red;
+    border-bottom:none;
+  }
+  75% {
+    border-top:  1px solid red;
+    border-left:  none;
+  }
+  100% {
+    border: none;
+  }
+}
+
+.red{
+  animation: invalidInput 1s infinite forwards ease-in;
+}
+

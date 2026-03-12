@@ -9,12 +9,18 @@ let tasks = document.querySelector(".values");
 let ul = document.querySelector("ul");
 
 btn.addEventListener("click", () => {
-  console.log(task.value);
-  let newTask = document.createElement("li");
-  newTask.innerHTML = `<input type="checkbox" id="check"/>${ul.children.length + 1}. ${task.value}<button class="del-btn">❌</button>`;
-  ul.append(newTask);
-  task.value = "";
-  updateTasks();
+  if(task.value!=""){
+    let newTask = document.createElement("li");
+    newTask.innerHTML = `${ul.children.length + 1}. ${task.value}<button class="del-btn">❌</button>`;
+    ul.append(newTask);
+    task.value = "";
+    task.classList.remove("red");
+    updateTasks();
+  }
+  else{
+    task.classList.add("red");
+  }
+
 });
 
 ul.addEventListener("click", (e) => {
