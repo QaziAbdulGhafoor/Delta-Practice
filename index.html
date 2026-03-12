@@ -1,9 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>Smart To-Do</h1>
+    <div class="container">
+      <div class="head">
+        <input type="text" id="task" placeholder="Enter a Task" />
+        <button class="add-btn">Add</button>
+      </div>
+      <div class="task-body">
+        <ul class="taskList"></ul>
+        <p class="values"></p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
