@@ -138,7 +138,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   height: 4rem;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #ece9ea;
 }
 
 #logo {
@@ -151,7 +151,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #ece9ea;
 }
 
 button {
@@ -171,12 +171,121 @@ button {
 
 #hero {
   grid-area: 2/1 / span 1 / span 4;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f8fb;
   /* background-color: blue; */
 }
 
+.info {
+  margin: 3.5rem 0 1rem 6rem;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.searchbar {
+  background-color: #fff;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #ece9ea;
+  box-shadow: 2px 2px 4px #ece9ea;
+}
+
+.searchbar select {
+  width: 28%;
+  height: 80%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  font-size: 1.15rem;
+}
+
+.searchbar input {
+  width: 47%;
+  height: 70%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  font-size: 1.15rem;
+}
+
+.searchbar button {
+  width: 25%;
+  height: 80%;
+  margin: 0;
+  background-color: #f36f1b;
+  color: white;
+  border: none;
+  outline: none;
+  margin-right: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.main-img {
+  height: 10rem;
+  margin: 2rem;
+}
+
 #main {
-  grid-area: 3/1 / span 2 / span 2;
-  background-color: grey;
+  grid-area: 3/1 / span 2 / span 5;
+  background-color: #f4f8fb;
+}
+
+#main h1 {
+  margin: 0 0 1rem 6rem;
+  font-size: 2.5rem;
+}
+
+.card-con {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem 4rem;
+}
+
+.card-con img {
+  width: 90%;
+  align-self: center;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+}
+
+.prof-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 10rem;
+  width: 18rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 8px #ece9ea;
+  transition-duration: 0.75s;
+}
+
+.prof-card:hover {
+  transform: scale(1.1);
+}
+
+.prof-card h2 {
+  padding: 0.5rem 0 0 0.75rem;
+}
+
+.prof-card p {
+  padding: 0 0.5rem 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.7;
 }
 
 #image {
