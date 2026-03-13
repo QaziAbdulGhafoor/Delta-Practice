@@ -117,12 +117,157 @@ li button {
 * {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
 .container {
-  height: 85vh;
-  width: 93vw;
-  margin: 2.5rem 2.5rem;
-  background-color: blue;
+  min-height: 85vh;
+  /* width: 93vw; */
   display: grid;
   grid-template-rows: 1fr 6fr 2fr 2fr 2fr;
-  grid-template-columns: repeat(1fr, 4);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#header {
+  grid-area: 1/1/2/2;
+  /* background-color: black; */
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 4rem;
+  border-bottom: 1px solid grey;
+}
+
+#logo {
+  height: 80%;
+  margin-left: 2rem;
+}
+
+#menu {
+  grid-area: 1/2/2/5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+button {
+  border: 1.5px solid rgb(132, 132, 132);
+  color: rgb(35, 35, 35);
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px;
+  background: transparent;
+  margin-left: 2rem;
+}
+
+#reg {
+  background-color: rgb(255, 97, 40);
+  color: white;
+}
+
+#hero {
+  grid-area: 2/1 / span 1 / span 4;
+  /* background-color: blue; */
+}
+
+#main {
+  grid-area: 3/1 / span 2 / span 2;
+  background-color: grey;
+}
+
+#image {
+  grid-area: 3/4 / span 1 / span 1;
+  background-color: aquamarine;
+}
+
+#extra {
+  grid-area: 4 /4 / span 1 / span 1;
+  background-color: greenyellow;
+}
+
+#banner {
+  grid-area: 5 /1 / span 1 / span 4;
+  background-color: yellow;
+}
+
+@media (max-width: 856px) {
+  .container {
+    grid-template-rows: 1fr 4fr 4fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  #header {
+    grid-area: 1/1 / span 1 / span 3;
+    justify-content: center;
+    margin-left: -2rem;
+  }
+
+  #menu {
+    grid-area: 3/1 / span 3 / span 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #hero {
+    grid-area: 2/1 / span 1 / span 3;
+  }
+
+  #main {
+    grid-area: 3/2 / span 1 / span 2;
+  }
+
+  #image {
+    grid-area: 5/3 / span 1 / span 1;
+  }
+
+  #extra {
+    grid-area: 5 /2 / span 1 / span 1;
+  }
+
+  #banner {
+    grid-area: 4 /2 / span 1 / span 2;
+  }
+}
+
+/*                                                          Mobile Phones                                        */
+@media (max-width: 600px) {
+  .container {
+    grid-template-rows: 1fr 1fr 3fr 3fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr;
+  }
+
+  #header {
+    grid-area: 1/1 / span 1 / span 1;
+    justify-content: center;
+    margin-left: -2rem;
+  }
+
+  #menu {
+    grid-area: 2/1 / span 1 / span 1;
+  }
+
+  #hero {
+    grid-area: 3/1 / span 1 / span 1;
+  }
+
+  #main {
+    grid-area: 4/1 / span 1 / span 1;
+  }
+
+  #image {
+    grid-area: 7/1 / span 1 / span 1;
+  }
+
+  #extra {
+    grid-area: 6/1 / span 1 / span 1;
+  }
+
+  #banner {
+    grid-area: 5/1 / span 1 / span 1;
+  }
 }

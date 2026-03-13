@@ -8,9 +8,34 @@
   </head>
   <body>
     <div class="container">
-      <div id="header">Header</div>
-      <div id="menu">Menu</div>
-      <div id="hero">Hero</div>
+      <div id="header">
+        <img src="./assets/logo.png" alt="logo img" id="logo" />
+      </div>
+      <div id="menu">
+        <a href="">Home</a><a href="">Services</a><a href="">About Us</a
+        ><a href="">Blog</a><a href="">Portfolio</a><a href="">Manage</a>
+        <div class="btns">
+          <button id="login">Login</button><button id="reg">Register</button>
+        </div>
+      </div>
+      <div id="hero">
+        <div class="info">
+          <h1>Find trusted local professionals near you</h1>
+          <p>
+            Book electricians,plumbers,tutors,and more just in a few clicks.
+          </p>
+          <div class="searchbar">
+            <select name="category" id="category">
+              <option value="electrician" selected>Electrician</option>
+              <option value="plumber">Plumber</option>
+              <option value="tutor">Tutor</option>
+            </select>
+            <p id="separater"></p>
+            <input type="text" />
+            <button id="search_btn">Search</button>
+          </div>
+        </div>
+      </div>
       <div id="main">Main</div>
       <div id="image">Image</div>
       <div id="extra">Extra</div>
